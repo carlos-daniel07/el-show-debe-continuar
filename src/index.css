@@ -1,0 +1,34 @@
+@import "tailwindcss";
+:root {
+  --rojo: #ff0505;
+  --negro: #1d1d1d;
+  --azul: #1764ff;
+  --verde: #22d19d;
+  --amarillo: #fdda41;
+  --blanco: #f7f7f7;
+  --marker: "Permanent Marker", sans-serif;
+  --anton: "Anton", sans-serif;
+  --pricedown: "Pricedown", sans-serif;
+}
+@font-face {
+  font-family: "Permanent Marker";
+  src: url(/public/fonts/PermanentMaker/PermanentMarker-Regular.woff2)
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Anton";
+  src: url(/fonts/Anton/Anton-Regular.woff2) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pricedown";
+  src: url(/public/fonts/pricedown/Pricedown\ Bl.otf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
