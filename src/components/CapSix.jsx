@@ -61,7 +61,7 @@ const CapSix = () => {
             disabled
             className="bg-gray-700 border-4 mb-10 border-black text-gray-500 text-4xl px-12 py-4 shadow-[8px_8px_0px_black] font['Pricedown'] cursor-not-allowed grayscale"
           >
-            NEXT
+            RESPONDER FORMULARIO
           </button>
         ) : (
           /* Botón desbloqueado con Link */
