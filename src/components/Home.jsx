@@ -101,6 +101,9 @@ export default function Home() {
           <p className="text-2xl font-bold font-mono">RESPECT +</p>
         </div> */}
 
+       <p className="text-xl font-['Permanent_Marker'] text-yellow-500 mt-2">
+            Para continuar primer debes suscribirte
+        </p>
       <div className="flex flex-col gap-10 mt-7 mb-6">
         <a
           target="_blank"

@@ -70,7 +70,7 @@ const CapSix = () => {
               style={{ fontFamily: "Pricedown, sans-serif" }}
               className="bg-[#00cf6e] border-4 border-black text-white text-4xl px-12 py-4 shadow-[8px_8px_0px_black] hover:scale-110 transition-transform font['Pricedown'] active:translate-y-1 mb-10"
             >
-              NEXT
+              RESPONDER FORMULARIO
             </button>
           </Link>
         )}
