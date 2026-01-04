@@ -86,7 +86,7 @@ export default function Home() {
             onEnded={handleVideoEnd}
           >
             <source
-              src="https://corpstudios.s3.us-east-1.amazonaws.com/El+show+debe+continuar/1.+El+peque%C3%B1o+Johny.mp4"
+              src="https://corpstudios.s3.us-east-1.amazonaws.com/El+show+debe+continuar/Introducci%C3%B3n.mp4"
               type="video/mp4"
             />
           </video>
