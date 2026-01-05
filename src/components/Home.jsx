@@ -102,7 +102,7 @@ export default function Home() {
         </div> */}
 
        <p className="text-xl font-['Permanent_Marker'] text-yellow-500 mt-2">
-            Para continuar primer debes suscribirte
+            Para continuar primero debes suscribirte
         </p>
       <div className="flex flex-col gap-10 mt-7 mb-6">
         <a
