@@ -42,7 +42,7 @@ const CapFour = () => {
             onEnded={handleVideoEnd}
           >
             <source
-              src="https://corpstudios.s3.us-east-1.amazonaws.com/El+show+debe+continuar/4+The+number+one.mp4"
+              src="https://d34d3fyadl2nvt.cloudfront.net/El+show+debe+continuar/4+The+number+one.mp4"
               type="video/mp4"
             />
           </video>

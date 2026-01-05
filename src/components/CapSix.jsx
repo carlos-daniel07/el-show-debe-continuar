@@ -42,7 +42,7 @@ const CapSix = () => {
             onEnded={handleVideoEnd}
           >
             <source
-              src="https://corpstudios.s3.us-east-1.amazonaws.com/El+show+debe+continuar/6.+El+desenlace.mp4"
+              src="https://d34d3fyadl2nvt.cloudfront.net/El+show+debe+continuar/6.+El+desenlace.mp4"
               type="video/mp4"
             />
           </video>

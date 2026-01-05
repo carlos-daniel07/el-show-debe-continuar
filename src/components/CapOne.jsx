@@ -43,7 +43,7 @@ const CapOne = () => {
             onEnded={handleVideoEnd}
           >
             <source
-              src="https://corpstudios.s3.us-east-1.amazonaws.com/El+show+debe+continuar/1.+El+peque%C3%B1o+Johny.mp4"
+              src="https://d34d3fyadl2nvt.cloudfront.net/El+show+debe+continuar/1.+El+peque%C3%B1o+Johny.mp4"
               type="video/mp4"
             />
           </video>
