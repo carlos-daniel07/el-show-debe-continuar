@@ -23,8 +23,6 @@ export default function Login() {
     try {
       const result = await signIn({ username, password });
 
-      console.log("🔍 Resultado de signIn:", result);
-
       if (result.isSignedIn) {
         // ✅ Login exitoso
         const user = { username };
@@ -34,10 +32,7 @@ export default function Login() {
         result.nextStep.signInStep ===
         "CONFIRM_SIGN_IN_WITH_NEW_PASSWORD_REQUIRED"
       ) {
-        // 🔑 Contraseña temporal → redirige a cambio de contraseña
         setError("Debes cambiar tu contraseña temporal");
-        // Opcional: navega a una página de reset
-        // navigate('/reset-password', { state: { username } });
       } else {
         setError("Inicio de sesión requiere paso adicional");
       }
@@ -69,6 +64,19 @@ export default function Login() {
 
       {/* Derecha: formulario */}
       <section className="w-full md:w-1/2 p-10 flex flex-col justify-center items-center g-[#fa2f2f]">
+        <img
+          src="/images/alb-2.webp"
+          alt="Turkano"
+          className="w-60 object-top bottom-0 left-0 absolute z-0 opacity-40 md:hidden"
+          style={{
+            maskImage:
+              "linear-gradient(to top, black 80%, transparent 100%), linear-gradient(to right, black 80%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to top, black 80%, transparent 100%), linear-gradient(to right, black 80%, transparent 100%)",
+            maskComposite: "intersect",
+            WebkitMaskComposite: "source-in",
+          }}
+        />
         <div className="text-center w-full py-4">
           <h1
             style={{ fontFamily: "Pricedown" }}
@@ -85,7 +93,7 @@ export default function Login() {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-xs flex flex-col gap-5"
+          className="w-full max-w-xs flex flex-col gap-5 z-10"
         >
           {error && (
             <p className="text-red-600 font-bold text-center bg-red-50 py-2 px-4 rounded animate-bounce">

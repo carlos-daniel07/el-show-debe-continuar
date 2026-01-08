@@ -8,7 +8,7 @@ const CapOne = () => {
 
   const handleVideoEnd = () => {
     setVideoFinished(true);
-    console.log("Objetivo: Video visto ✅");
+    // console.log("Objetivo: Video visto ✅");
   };
   const isNextDisabled = !videoFinished;
 
@@ -48,12 +48,20 @@ const CapOne = () => {
             />
           </video>
           {videoFinished && (
-            <div className="absolute top-4 right-4 bg-green-500 text-black px-4 py-1 font-bold border-2 border-black animate-bounce">
+            <div
+              style={{ fontFamily: "Pricedown, sans-serif" }}
+              className="text-white text-xl absolute top-4 right-4 bg-green-500 px-4 py-1 font-bold border-2 border-black animate-bounce"
+            >
               VIDEO VISTO
             </div>
           )}
         </div>
       </div>
+      {!videoFinished ? (
+        <p className="text-lg font-['Permanent_Marker'] text-yellow-500 mt-2 -rotate-2">
+          ( Para continuar primero debes mirar el video )
+        </p>
+      ) : null}
       <div className="flex flex-col gap-10 mt-7 mb-6">
         {isNextDisabled ? (
           /* Botón bloqueado sin Link */
@@ -66,7 +74,7 @@ const CapOne = () => {
           </button>
         ) : (
           /* Botón desbloqueado con Link */
-          <Link to="/CapTwo">
+          <Link to="/b2951df8-3718-47fc-9dc6-ab472f36d014">
             <button
               style={{ fontFamily: "Pricedown, sans-serif" }}
               className="bg-[#00cf6e] border-4 border-black text-white text-4xl px-12 py-4 shadow-[8px_8px_0px_black] hover:scale-110 transition-transform font['Pricedown'] active:translate-y-1 mb-10"

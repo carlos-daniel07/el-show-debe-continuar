@@ -19,12 +19,12 @@ export default function Home() {
 
   const handleVideoEnd = () => {
     setVideoFinished(true);
-    console.log("Objetivo: Video visto ✅");
+    // console.log("Objetivo: Video visto ✅");
   };
 
   const handleSubscribe = () => {
     setSubscribed(true);
-    console.log("Objetivo: Suscrito ✅");
+    // console.log("Objetivo: Suscrito ✅");
   };
 
   const isNextDisabled = !videoFinished || !subscribed;
@@ -91,20 +91,22 @@ export default function Home() {
             />
           </video>
           {videoFinished && (
-            <div className="absolute top-4 right-4 bg-green-500 text-black px-4 py-1 font-bold border-2 border-black animate-bounce">
+            <div
+              style={{ fontFamily: "Pricedown, sans-serif" }}
+              className="text-white text-xl absolute top-4 right-4 bg-green-500 px-4 py-1 font-bold border-2 border-black animate-bounce"
+            >
               VIDEO VISTO
             </div>
           )}
         </div>
       </div>
-      {/* <div className="absolute -bottom-15 -right-1 bg-yellow-500 text-black p-4 border-4 border-black rotate-12">
-          <p className="text-2xl font-bold font-mono">RESPECT +</p>
-        </div> */}
 
-       <p className="text-xl font-['Permanent_Marker'] text-yellow-500 mt-2">
-            Para continuar primero debes suscribirte
+      {!videoFinished || !subscribed ? (
+        <p className="text-lg font-['Permanent_Marker'] text-yellow-500 mt-2 -rotate-2">
+          ( Para continuar primero debes mirar el video y suscribirte )
         </p>
-      <div className="flex flex-col gap-10 mt-7 mb-6">
+      ) : null}
+      <div className="flex flex-col gap-10 mt-4 mb-6">
         <a
           target="_blank"
           href="https://www.youtube.com/@19117records"
@@ -135,7 +137,7 @@ export default function Home() {
           </button>
         ) : (
           /* Botón desbloqueado con Link */
-          <Link to="/CapOne">
+          <Link to="/e7945322-2726-45f5-bbcd-87e54c81f479">
             <button
               style={{ fontFamily: "Pricedown, sans-serif" }}
               className="bg-[#00cf6e] border-4 border-black text-white text-4xl px-12 py-4 shadow-[8px_8px_0px_black] hover:scale-110 transition-transform font['Pricedown'] active:translate-y-1 mb-10"
