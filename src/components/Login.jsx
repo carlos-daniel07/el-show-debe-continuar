@@ -65,7 +65,7 @@ export default function Login() {
       {/* Derecha: formulario */}
       <section className="w-full md:w-1/2 p-10 flex flex-col justify-center items-center g-[#fa2f2f]">
         <img
-          src="/images/alb-2.webp"
+          src="/images/alb-2.svg"
           alt="Turkano"
           className="w-60 object-top bottom-0 left-0 absolute z-0 opacity-40 md:hidden"
           style={{
