@@ -1,16 +1,24 @@
-# React + Vite
+# 🎭 El Show Debe Continuar - Interactive Gamified Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web gamificada desarrollada para la campaña promocional del artista Turkano. La plataforma integra un sistema de "Capture The Flag" (CTF) basado en pistas musicales, donde los usuarios deben resolver acertijos para desbloquear progresivamente los capítulos de la historia.
 
-Currently, two official plugins are available:
+🔗 **[Ver Plataforma en Vivo](https://showdebecontinuar.com/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Arquitectura y Características
 
-## React Compiler
+* **Autenticación Serverless:** Integración nativa con **AWS Amplify** para la gestión segura de identidades y control de acceso.
+* **Rutas Protegidas:** Implementación de `react-router-dom` junto con Context API (`AuthProvider`) para restringir el acceso a los capítulos de la historia según el estado de autenticación del usuario.
+* **Desbloqueo Progresivo:** Lógica de gamificación dividida en 6 módulos independientes (`CapOne` a `CapSix`), renderizados dinámicamente conforme el usuario avanza.
+* **Desarrollo Ágil:** Entorno de construcción optimizado con Vite y estilizado mediante Tailwind CSS v4 para una interfaz inmersiva y de alto rendimiento.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tecnologías Utilizadas
 
-## Expanding the ESLint configuration
+* **React 19**
+* **AWS Amplify** (Cloud Backend & Auth)
+* **React Router DOM** (Routing)
+* **Context API** (State Management)
+* **Tailwind CSS v4**
+* **Vite**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧠 Retos Técnicos
+El desafío principal de la arquitectura fue orquestar un flujo de usuario seguro y dinámico. Se diseñó un sistema de rutas privadas (`ProtectedRoute.jsx`) que interactúa constantemente con el estado global de autenticación, asegurando que los usuarios no pudieran "saltarse" los acertijos manipulando la URL, manteniendo así la integridad del concurso promocional.
