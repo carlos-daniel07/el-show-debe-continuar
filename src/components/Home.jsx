@@ -8,6 +8,7 @@ export default function Home() {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
   const [showMission, setShowMission] = useState(true);
+  const [showAlbumPromo, setShowAlbumPromo] = useState(true);
   const [videoFinished, setVideoFinished] = useState(false);
   const [subscribed, setSubscribed] = useState(false);
   const videoRef = useRef(null);
@@ -49,6 +50,74 @@ export default function Home() {
           <h2 className="text-[100px] text-yellow-500 font-['Pricedown'] drop-shadow-[10px_10px_0px_black]">
             MISSION PASSED!
           </h2>
+        </div>
+      )}
+
+      {!showMission && showAlbumPromo && (
+        <div
+          className="fixed inset-0 z-40 flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm"
+          onClick={() => setShowAlbumPromo(false)}
+          role="presentation"
+        >
+          <section
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="album-promo-title"
+            className="relative w-full max-w-2xl -rotate-1 border-8 border-black bg-yellow-400 p-3 text-black shadow-[14px_14px_0px_#ef0000] sm:p-5"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setShowAlbumPromo(false)}
+              aria-label="Cerrar anuncio del álbum"
+              className="absolute -right-4 -top-4 z-10 flex h-12 w-12 items-center justify-center border-4 border-black bg-white text-3xl font-black shadow-[4px_4px_0px_#000] transition-transform hover:scale-110"
+            >
+              ×
+            </button>
+
+            <div className="grid items-center gap-5 bg-[#1d1d1d] p-4 text-white sm:grid-cols-[220px_1fr]">
+              <img
+                src="/images/alb-1.jpeg"
+                alt="Portada de Lo más fresco de la city"
+                className="mx-auto aspect-square w-full max-w-55 border-4 border-black object-cover shadow-[6px_6px_0px_#ef0000]"
+              />
+              <div className="text-center sm:text-left">
+                <p className="mb-2 font-['Permanent_Marker'] text-lg text-yellow-400">
+                  Álbum de preestreno
+                </p>
+                <h2
+                  id="album-promo-title"
+                  style={{ fontFamily: "Pricedown, sans-serif" }}
+                  className="text-4xl uppercase leading-none text-white drop-shadow-[4px_4px_0px_#ef0000] sm:text-5xl"
+                >
+                  Lo más fresco de la city
+                </h2>
+                <p className="my-4 font-bold text-gray-200">
+                  Escúchalo ahora y descubre lo nuevo de Turkano.
+                </p>
+                <a
+                  href="https://youtu.be/Af-ZeY72rZ4"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-3 border-4 border-black bg-red-600 px-5 py-3 text-white shadow-[5px_5px_0px_#000] transition-transform hover:scale-105 focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-yellow-400"
+                >
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    className="h-7 w-7 fill-current"
+                  >
+                    <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" />
+                  </svg>
+                  <span
+                    style={{ fontFamily: "Pricedown, sans-serif" }}
+                    className="text-2xl uppercase"
+                  >
+                    Escuchar en YouTube
+                  </span>
+                </a>
+              </div>
+            </div>
+          </section>
         </div>
       )}
 
